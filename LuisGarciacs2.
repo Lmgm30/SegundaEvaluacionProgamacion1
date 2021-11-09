@@ -1,0 +1,64 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+
+
+namespace programa_02
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+
+			string cadena = "";
+			int edad = 0;
+			double altura = 0.0;
+			double peso = 0;
+
+
+			Console.WriteLine("Bienvenido al parque de diversiones EXTREMELAND, por favor ingrese los siguientes datos");
+
+			Console.WriteLine("Por favor ingresa tu edad");
+			cadena = Console.ReadLine();
+			edad = Convert.ToInt32(cadena);
+
+
+			if (edad < 18)
+			{
+				Console.WriteLine("Disculpe el limite minimo de edad para ingresar a EXTREMELAND es de 18 años.");
+			}
+			else
+			{
+
+
+				Console.WriteLine("Por favor ingresa tu altura, en metros");
+
+				Console.WriteLine("¿cual es tu altura? En metros");
+				cadena = Console.ReadLine();
+				altura = Convert.ToDouble(cadena);
+
+				if (altura >= 1.5)
+					Console.WriteLine("Perfecto, por favor ingrese el siguiente dato");
+
+
+				Console.WriteLine("Por favor ingresa tu peso");
+				cadena = Console.ReadLine();
+				peso = Convert.ToDouble(cadena);
+
+				if (peso < 72)
+					Console.WriteLine("Disculpe,su peso es muy bajo para lo extremo de las atracciones");
+				if (peso >= 72)
+					Console.WriteLine("¡Perfecto! cumple con los requisitos minimos, puede ingresar a EXTREMELAND, terror y diversion");
+			}
+
+
+
+
+			Console.ReadKey();
+		}
+	}
+}
+
+
